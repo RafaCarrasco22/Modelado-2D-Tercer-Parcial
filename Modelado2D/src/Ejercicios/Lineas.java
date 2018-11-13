@@ -64,17 +64,6 @@ public class Lineas extends JFrame{
     public void paint(Graphics g) {
         super.paint(g);
         g2 = g;
-       
-        /*
-        int aumento = 10;
-        int x =100;
-        System.out.println(valor);
-        System.out.println(x);
-        for(int i=0; i<valor; i++){
-            g.drawLine(x, 100, x, 200);
-            x+=aumento;
-        }
-        super.repaint();*/
         
     }
     public void dibujar(int valor) {
