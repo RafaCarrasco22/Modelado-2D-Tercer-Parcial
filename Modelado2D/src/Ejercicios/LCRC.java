@@ -94,13 +94,13 @@ public class LCRC extends JFrame{
        super.add(panel, BorderLayout.CENTER);
         
         this.setSize(550, 400);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        //this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         LCRC v = new LCRC();
-    }
+    }*/
     
    public void paint(Graphics g) {
         super.paint(g);

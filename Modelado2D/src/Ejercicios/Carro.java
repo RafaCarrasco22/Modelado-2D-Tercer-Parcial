@@ -6,81 +6,68 @@
 package Ejercicios;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.Rectangle2D;
 import javax.swing.JFrame;
 
 /**
  *
  * @author Rafael
  */
-public class Carro extends JFrame{
-    Graphics g2;
-      Graphics g3;
-      Graphics g4;
-      Graphics g5;
-      
-      public Carro() {
+public class Carro extends JFrame {
+
+    public Carro() {
         super("RUUUUUUUUUUUUUUUUN");
 
-        setSize(600, 565);
+        setSize(550, 365);
         setVisible(true);
     }
-      public static void main(String args[]) {
-        Casa application = new Casa();
+
+    /*public static void main(String args[]) {
+        Carro application = new Carro();
         application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         application.setVisible(true);
-    }
-    // display various lines, rectangles and ovals
+    }*/
+    
+        // display various lines, rectangles and ovals
     public void paint(Graphics g) {
         super.paint(g); // call superclass's paint method
+        //llantas
+        g.setColor(Color.black);
+        g.fillOval(30, 180, 100, 100);
+        g.setColor(Color.white);
+        g.fillOval(40, 190, 80, 80);
+        g.setColor(Color.black);
+        g.drawLine(40, 230, 120, 230);
+        g.drawLine(80, 180, 80, 280);
+        g.drawOval(50, 200, 60, 60);
 
+        g.setColor(Color.black);
+        g.fillOval(330, 180, 100, 100);
+        g.setColor(Color.white);
+        g.fillOval(340, 190, 80, 80);
+        g.setColor(Color.black);
+        g.drawLine(340, 230, 420, 230);
+        g.drawLine(380, 180, 380, 280);
+        g.drawOval(350, 200, 60, 60);
         
-
+        //cuerpo carro
+        g.setColor(Color.PINK);
+        g.fillRect(10, 123, 122, 12);
         g.setColor(Color.BLUE);
-        g.drawRect(50, 200, 450, 270);
+        g.fillRect(10, 133, 500, 82);
+        g.fillRect(122, 30, 388, 123);
         
-        g3 = this.getGraphics();
-        g3.drawRect(100, 230, 60, 60);
-        
-        g4 = this.getGraphics();
-        g4.drawRect(400, 230, 60, 60);
-        
-        Lineas linea = new Lineas();
-        int aumento = 2;
-        int x =10;
-        g2 = this.getGraphics();
-        g2.setColor(Color.GREEN);
-        for(int i=0; i<1000; i++){
-            g2.drawLine(x, 470, x, 480);
-            x+=aumento;
-        }
-        g2.setColor(Color.RED);
-        g2.drawLine(130, 230, 130, 290);
-        g2.drawLine(430, 230, 430, 290);
-        
-        g2.drawLine(30, 200,520 , 200);
-        g2.drawLine(30, 200, 50, 160);
-        g2.drawLine(500, 160, 520,200);
-        g2.drawLine(50, 160, 500, 160);
-        
-        
-        linea.invalidate();
-        linea.validate();
-        linea.repaint();
-        
-
-        
-        Graphics2D gg = (Graphics2D) g;
-        Rectangle2D r = new Rectangle2D.Float(245.0f,
-                320.0f, 90.0f, 150.0f);
-        Ellipse2D e = new Ellipse2D.Float(248.0f, 380.0f,
-                10.0f, 10.0f);
-        gg.draw(r);
-        gg.draw(e);
-        
-
+        //detalles
+        g.setColor(Color.YELLOW);
+        g.fillOval(10, 125, 10, 30);
+        g.setColor(Color.cyan);
+        g.fillRect(130, 37, 130, 100);
+        g.setColor(Color.ORANGE);
+        g.drawLine(230, 139, 260, 139);
+        g.drawLine(230, 140, 260, 140);
+        g.drawLine(230, 141, 260, 141);
+        g.setFont(new Font("Century", Font.CENTER_BASELINE, 20));
+        g.drawString("El panadero con el pan", 270, 100);
     } // end method paint
 }

@@ -53,13 +53,13 @@ public class Cuadrado extends JFrame{
        super.add(panel, BorderLayout.CENTER);
         
         this.setSize(350, 400);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        //this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
     }
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         Cuadrado v = new Cuadrado();
-    }
+    }*/
     
    public void paint(Graphics g) {
         super.paint(g);

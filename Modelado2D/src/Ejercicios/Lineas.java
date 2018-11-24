@@ -55,26 +55,15 @@ public class Lineas extends JFrame{
 //setVisible(true);
     }
 
-    public static void main(String args[]) {
+    /*public static void main(String args[]) {
         Lineas application = new Lineas();
         application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         application.setVisible(true);
-    }
+    }*/
     
     public void paint(Graphics g) {
         super.paint(g);
         g2 = g;
-       
-        /*
-        int aumento = 10;
-        int x =100;
-        System.out.println(valor);
-        System.out.println(x);
-        for(int i=0; i<valor; i++){
-            g.drawLine(x, 100, x, 200);
-            x+=aumento;
-        }
-        super.repaint();*/
         
     }
     public void dibujar(int valor) {
